@@ -28,7 +28,10 @@ class PostAdapter(private val list: ArrayList<PostResponse>): RecyclerView.Adapt
         return PostViewHolder(view)
     }
 
-    override fun getItemCount(): Int = list.size
+  //  override fun getItemCount(): Int = list.size
+  override fun getItemCount(): Int {
+      return list.size
+  }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
        holder.bind(list[position])

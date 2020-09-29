@@ -1,13 +1,13 @@
 package com.bwrsks.latihanretrofit
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.ArrayList
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         rvPost.setHasFixedSize(true)
         rvPost.layoutManager = LinearLayoutManager(this)
 
-        RetrofitClient.instance.getPosts().enqueue(object: Callback<ArrayList<PostResponse>>{
+        RetrofitClient.instance.getEmployee().enqueue(object: Callback<ArrayList<PostResponse>>{
             override fun onFailure(call: Call<ArrayList<PostResponse>>, t: Throwable) {
 
             }
